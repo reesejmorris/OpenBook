@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "OpenBook"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-OpenBook-75c99e59-8330-4b2f-a0d6-984a770d720a;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}
