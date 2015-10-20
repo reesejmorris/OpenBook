@@ -2,19 +2,22 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="container">
-    <h1>{{main.title}}</h1>
+<div ng-controller="StoryController" class="container-fluid">
+    <div ng-model="stories">
+        <h1>{{story.Title}}</h1>
+    </div>
+</div>
 
-    <br>
+<div ng-controller="MainController" class="container-fluid">
 
     <div ng-repeat="snippet in snippets">
-        <h1>{{snippet.Content}}</h1>
-        <h1>{{snippet.Author}}</h1>
+        <div class="col-md-8">{{snippet.Content}}</div>
+        <div class="col-md-4">{{snippet.Author}}</div>
     </div>
 
-    <br>
+    <br />
     
-    <form ng-submit="submit()" ng-controller="MainController">
+    <form ng-submit="submit()" style="padding-top: 20px">
         <label>Snippet Content</label>
         <input type="text" id="contentText" class="form-control" ng-model="snippetContent" />
         <br>
@@ -23,7 +26,5 @@
         <br>
         <input type="submit" value="submit" />
     </form>
-    <br>
-
-
+    <br />
 </div>
