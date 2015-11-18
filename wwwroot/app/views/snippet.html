@@ -1,0 +1,23 @@
+﻿<div ng-controller="snippetCtrl" class="container">
+
+    <div ng-repeat="snippet in snippets" class="row">
+        <div class="col-md-8">{{snippet.Content}}</div>
+        <div class="col-md-4">{{snippet.Author}}</div>
+    </div>
+
+    <div class="container">
+        <form ng-submit="submit()" style="padding-top: 20px">
+            <div class="form-group">
+                <label>Snippet Content</label>
+                <input type="text" id="contentText" class="form-control" ng-model="snippetContent" />
+            </div>
+            <div class="form-group">
+                <label>Snippet Author</label>
+                <input type="text" id="authorText" class="form-control" ng-model="snippetAuthor" />
+            </div>
+            <input type="submit" value="Submit" class="btn btn-default" />
+        </form>
+    </div>
+
+    <br />
+</div>

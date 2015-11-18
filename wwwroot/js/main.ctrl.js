@@ -6,7 +6,7 @@
     vm.snippetContent = '';
     vm.snippetAuthor = '';
 
-    $http.get('http://localhost:49629/api/snippet').success(function (data, status, headers, config) {
+    $http.get('http://openbookapi.azurewebsites.net/api/snippet').success(function (data, status, headers, config) {
         alert("successsssss");
         $scope.snippets = data;
     }).error(function (data, status, headers, config) {
@@ -22,7 +22,7 @@
             'SnippetAuthor': $scope.snippetAuthor
         }
 
-        $http.post('http://localhost:49629/api/snippet', snippet, {
+        $http.post('http://openbookapi.azurewebsites.net/api/snippet', snippet, {
         }).success(function (data, status, headers, config) {
             alert("Snippet added successfully");
         }).error(function (data, status, headers, config) {
